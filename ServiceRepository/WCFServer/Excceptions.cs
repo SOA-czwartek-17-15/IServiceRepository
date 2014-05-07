@@ -60,7 +60,7 @@ namespace NServiceRepository
         {
             get
             {
-                return "Error: Taki serwis jest już zarejestrowany, Yo!";
+                return "Error: Taki serwis jest już zarejestrowany!";
             }
         }
     }

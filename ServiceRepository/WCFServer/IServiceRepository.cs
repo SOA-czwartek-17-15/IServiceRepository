@@ -26,6 +26,6 @@ namespace NServiceRepository
         void Unregister(String Name);
 
         [OperationContract]
-        bool TryConnect(String Name);
+        void Alive(String Name);
     }
 }

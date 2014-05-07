@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Runtime.Serialization;
+using log4net;
+using WCFServer.Models;
+using WCFServer;
+using System.Threading;
 
 namespace NServiceRepository
 {
@@ -17,13 +21,31 @@ namespace NServiceRepository
     public class ServiceRepository : IServiceRepository
     {
         /**
-         * Lista z serwisami
+         * Repozytorium albo z baza danych albo mock
          * */
-        private List<Service> Services;
+        private Repository Repo;
+        private NonRepository NonRepo;
+        private MyTimer oTimer;
+        bool Datab;
 
-        public ServiceRepository()
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        public ServiceRepository(bool Database=true)
         {
-            Services = new List<Service>();
+            Datab = Database;
+            if (Datab)
+            {
+                Repo = new Repository();
+                oTimer = new MyTimer(Repo);
+            }
+            else
+            {
+                NonRepo = new NonRepository();
+                oTimer = new MyTimer(NonRepo);
+            }
+            //odpalenie oddzielnego watku na usuwanie serwisow ktore przestaly sie komunikowac
+            Thread timerThread = new Thread(oTimer.StartTimer);
+            timerThread.Start();
         }
 
         /**
@@ -40,8 +62,13 @@ namespace NServiceRepository
             var NewService = new Service();
             NewService.Adress = Address;
             NewService.Name = Name;
-
-            Services.Add(NewService);
+            NewService.LastSeen = DateTime.Now;
+            Console.WriteLine("Zarejestrowano serwis: " + Name + " pod adresem: " + Address);
+            log.Info("Zarejestrowano serwis: " + Name + " pod adresem: " + Address);
+            if (Datab)
+                Repo.AddService(NewService);
+            else
+                NonRepo.AddService(NewService);
         }
 
         /**
@@ -50,9 +77,7 @@ namespace NServiceRepository
         public String GetServiceLocation(String Name)
         {
             var Service = FindService(Name);
-
             if (Service == null) throw new ServiceNotFoundException();
-
             return Service.Adress;
         }
 
@@ -62,18 +87,29 @@ namespace NServiceRepository
         public void Unregister(String Name)
         {
             var Service = FindService(Name);
-
             if (Service == null) throw new ServiceNotFoundException();
-
-            Services.Remove(Service);
+            if (Datab)
+                Repo.RemoveService(Service);
+            else
+                NonRepo.RemoveService(Service);
+            Console.WriteLine("Wyrejestrowano serwis: " + Name);
+            log.Info("Wyrejestrowano serwis: " + Name);
         }
 
         /**
-         * Tu będzie próba połączenia
+         * Odnowa połączenia aby wiadomo bylo czy serwis dalej istnieje
          * */
-        public bool TryConnect(String Name)
+        public void Alive(String Name)
         {
-            return true;
+            var Service = FindService(Name);
+            if (Service == null) throw new ServiceNotFoundException();
+            Service.LastSeen = DateTime.Now;
+            if (Datab)
+                Repo.UpdateService(Service);
+            else
+                NonRepo.UpdateService(Service);
+            Console.WriteLine("Zglosil sie serwis: "+Name);
+            log.Info("Zglosil sie serwis: " + Name );
         }
 
         /**
@@ -81,7 +117,10 @@ namespace NServiceRepository
          * */
         private Service FindService(String Name)
         {
-            return Services.Find(Element => Element.Name == Name);
+            if (Datab)
+                return Repo.FindService(Name);
+            else
+                return NonRepo.FindService(Name);
         }
 
     }

@@ -1,0 +1,10 @@
+2014-05-06 16:29:18,787 [8] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-05-06 16:29:25,083 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1
+2014-05-06 16:29:25,624 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis2 pod adresem: adres_serwisu_2
+2014-05-06 16:29:28,716 [12] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-05-06 16:29:31,529 [15] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-05-06 16:29:31,757 [12] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-05-06 16:29:34,796 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-05-06 16:29:37,827 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-05-06 16:29:44,704 [11] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis2 wygas³.
+2014-05-06 16:29:51,529 [8] INFO  NServiceRepository.Program [(null)] - Zatrzymanie Serwera
