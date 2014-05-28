@@ -30,3 +30,15 @@ C:\Users\Gry\Desktop\ServiceRepository\WCFServer\bin\Debug\EntityFramework.xml
 C:\Users\Gry\Desktop\ServiceRepository\WCFServer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Gry\Desktop\ServiceRepository\WCFServer\bin\Debug\log4net.xml
 C:\Users\Gry\Desktop\ServiceRepository\WCFServer\obj\Debug\ServiceRepository.csprojResolveAssemblyReference.cache
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\WCFServer.exe.config
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\obj\Debug\WCFServer.exe
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\obj\Debug\WCFServer.pdb
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\WCFServer.exe
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\WCFServer.pdb
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\EntityFramework.dll
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\log4net.dll
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\EntityFramework.xml
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\bin\Debug\log4net.xml
+C:\Users\Gośka\Downloads\IServiceRepository-master\ServiceRepository\WCFServer\obj\Debug\ServiceRepository.csprojResolveAssemblyReference.cache

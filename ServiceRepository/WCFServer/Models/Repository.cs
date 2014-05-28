@@ -65,7 +65,7 @@ namespace WCFServer.Models
             foreach (var serv in context.Servs)
             {
                 duration = DateTime.Now - serv.LastSeen;
-                if (duration.Seconds > 5)
+                if (duration.Seconds > 20)
                 {
                     context.Servs.Remove(serv);
                     Console.WriteLine("Serwis {0} wygasł", serv.Name);

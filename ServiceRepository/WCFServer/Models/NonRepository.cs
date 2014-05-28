@@ -23,14 +23,20 @@ namespace WCFServer.Models
         * Dodanie serwisu do bazy
         **/
         public void AddService(Service serv){
-            Services.Add(serv);
+            lock (_locker)
+            {
+                Services.Add(serv);
+            }
         }
         /**
         * Usuniecie serwisu z bazy
         **/
         public void RemoveService(Service serv)
         {
-            Services.Remove(serv);
+            lock (_locker)
+            {
+                Services.Remove(serv);
+            }
         }
         /**
         * Zaktualizowanie czasu ostatniej komunikacji z serwisem
@@ -43,22 +49,35 @@ namespace WCFServer.Models
         **/
         public Service FindService(String Name)
         {
-            return Services.Find(serv => serv.Name == Name);
+            lock (_locker)
+            {
+                return Services.Find(serv => serv.Name == Name);
+            }
         }
         /**
         * Usuniecie nieaktywnych serwisow
         **/
+        object _locker = new object();
+
         public void KillZombieServices()
         {
             TimeSpan duration;
-            foreach (var serv in Services)
+            var services = (IEnumerable<Service>)null;
+            lock (_locker)
+            {
+                services = Services.ToList();
+            }
+            foreach (var serv in services)
             {
                 duration = DateTime.Now - serv.LastSeen;
-                if (duration.Seconds > 5)
+                if (duration.Seconds > 10)
                 {          
                     Console.WriteLine("Serwis {0} wygasł", serv.Name);
                     log.Info("Serwis "+ serv.Name+" wygasł.");
-                    Services.Remove(serv);
+                    lock (_locker)
+                    {
+                        Services.Remove(serv);
+                    }
                 }     
             }
         }

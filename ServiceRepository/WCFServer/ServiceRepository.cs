@@ -53,11 +53,11 @@ namespace NServiceRepository
          * */
         public void RegisterService(String Name, String Address)
         {
-            if (Name == String.Empty || Address == String.Empty)
-                throw new EmptyAddressOrNameException();
+           // if (Name == String.Empty || Address == String.Empty)
+             //   throw new EmptyAddressOrNameException();
 
             if (FindService(Name) != null)
-                throw new ServiceAlreadyExistsException();
+                Unregister(Name);
 
             var NewService = new Service();
             NewService.Adress = Address;
@@ -77,7 +77,8 @@ namespace NServiceRepository
         public String GetServiceLocation(String Name)
         {
             var Service = FindService(Name);
-            if (Service == null) throw new ServiceNotFoundException();
+            if (Service == null) return null;
+           // if (Service == null) throw new ServiceNotFoundException();
             return Service.Adress;
         }
 
@@ -87,13 +88,16 @@ namespace NServiceRepository
         public void Unregister(String Name)
         {
             var Service = FindService(Name);
-            if (Service == null) throw new ServiceNotFoundException();
-            if (Datab)
-                Repo.RemoveService(Service);
-            else
-                NonRepo.RemoveService(Service);
-            Console.WriteLine("Wyrejestrowano serwis: " + Name);
-            log.Info("Wyrejestrowano serwis: " + Name);
+            if (Service != null)
+            { 
+                //throw new ServiceNotFoundException();
+                if (Datab)
+                    Repo.RemoveService(Service);
+                else
+                    NonRepo.RemoveService(Service);
+                Console.WriteLine("Wyrejestrowano serwis (user): " + Name);
+                log.Info("Wyrejestrowano serwis (user): " + Name);
+            }
         }
 
         /**
@@ -102,14 +106,17 @@ namespace NServiceRepository
         public void Alive(String Name)
         {
             var Service = FindService(Name);
-            if (Service == null) throw new ServiceNotFoundException();
-            Service.LastSeen = DateTime.Now;
-            if (Datab)
-                Repo.UpdateService(Service);
-            else
-                NonRepo.UpdateService(Service);
-            Console.WriteLine("Zglosil sie serwis: "+Name);
-            log.Info("Zglosil sie serwis: " + Name );
+            if (Service != null)
+            {
+                //throw new ServiceNotFoundException();
+                Service.LastSeen = DateTime.Now;
+                if (Datab)
+                    Repo.UpdateService(Service);
+                else
+                    NonRepo.UpdateService(Service);
+                Console.WriteLine("Zglosil sie serwis: " + Name);
+                log.Info("Zglosil sie serwis: " + Name);
+            }
         }
 
         /**
