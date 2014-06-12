@@ -52,9 +52,15 @@ namespace WCFServer.Models
         /**
         * Wyszukwanie serwisu w bazie
         **/
-        public Service FindService(String Name)
+        public Service FindService(String Name, String Binding)
         {
-            return context.Servs.SingleOrDefault(serv => serv.Name == Name);
+            try
+            {
+                return context.Servs.SingleOrDefault(serv => serv.Name == Name && serv.Binding == Binding);
+            }
+            catch {
+                return null;
+            }
         }
         /**
         * Usuniecie nieaktywnych serwisow

@@ -21,3 +21,57 @@ C:\Users\Gry\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCF
 C:\Users\Gry\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\Gry\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.xml
 C:\Users\Gry\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\ServiceRepository.csprojResolveAssemblyReference.cache
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe.config
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.exe
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.pdb
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.pdb
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.dll
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.dll
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.xml
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.xml
+C:\Users\Gośka\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\ServiceRepository.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe.config
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.pdb
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.dll
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.dll
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.xml
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.xml
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.exe
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.pdb
+C:\Users\Mateusz\Desktop\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\ServiceRepository.csprojResolveAssemblyReference.cache
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe.config
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.exe
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.pdb
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.pdb
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.dll
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.dll
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.dll
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.xml
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.xml
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.xml
+E:\Dokumenty\Konrad\Windows\Downloads\NOWY SERWIS\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\ServiceRepository.csprojResolveAssemblyReference.cache
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe.config
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.exe
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\WCFServer.pdb
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.exe
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\WCFServer.pdb
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\clrzmq.dll
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.dll
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.dll
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\MsgPack.dll
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\Newtonsoft.Json.dll
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\clrzmq.pdb
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\clrzmq.xml
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.xml
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\log4net.xml
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\bin\Release\Newtonsoft.Json.xml
+C:\Users\Gry\Desktop\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\WCFServer\obj\Release\ServiceRepository.csprojResolveAssemblyReference.cache

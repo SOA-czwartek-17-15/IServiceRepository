@@ -47,11 +47,11 @@ namespace WCFServer.Models
         /**
         * Wyszukwanie serwisu w bazie
         **/
-        public Service FindService(String Name)
+        public Service FindService(String Name, String Binding)
         {
             lock (_locker)
             {
-                return Services.Find(serv => serv.Name == Name);
+                return Services.Find(serv => serv.Name == Name && serv.Binding == Binding);
             }
         }
         /**
