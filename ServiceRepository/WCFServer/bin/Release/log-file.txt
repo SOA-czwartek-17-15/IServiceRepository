@@ -12783,3 +12783,8 @@
 2014-06-12 01:56:44,613 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: Klient pod adresem: Location
 2014-06-12 01:56:56,074 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis Klient wygas³.
 2014-06-12 03:28:14,182 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-12 03:38:30,907 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-12 03:38:44,923 [17] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: Klient pod adresem: Location
+2014-06-12 03:38:45,198 [17] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): Klient
+2014-06-12 03:38:45,199 [17] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: Klient pod adresem: Location
+2014-06-12 03:38:56,791 [23] INFO  WCFServer.Models.NonRepository [(null)] - Serwis Klient wygas³.
