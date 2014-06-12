@@ -12,6 +12,11 @@ using System.Configuration;
 using log4net;
 using System.Data.Entity;
 using WCFServer.Models;
+using System.Threading;
+using ZeroMQ;
+using zguide;
+using Newtonsoft.Json;
+using WCFServer;
 
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
@@ -23,13 +28,179 @@ using WCFServer.Models;
  * */
 
 namespace NServiceRepository
-{ 
+{
+
     /**
      * Klasa główna programu
      * */
     public class Program
     {
-        
+        private static ServiceRepository Repository;
+
+        //  ---------------------------------------------------------------------
+        //  This is our client task
+        //  It connects to the server, and then sends a request once per second
+        //  It collects responses as they arrive, and it prints them out. We will
+        //  run several client tasks in parallel, each with a different random ID.
+        public static void ClientTask()
+        {
+            using (var context = ZmqContext.Create())
+            {
+                using (ZmqSocket client = context.CreateSocket(SocketType.DEALER))
+                {
+                    //  Generate printable identity for the client
+                    string identity = ZHelpers.SetID(client, Encoding.Unicode);
+                    //client.Connect("tcp://localhost:5570");
+                    string serviceRepoAddress = ConfigurationSettings.AppSettings["serviceRepoAddressZMQ"];
+                    client.Connect(serviceRepoAddress);
+
+                    client.ReceiveReady += (s, e) =>
+                    {
+                        var zmsg = new ZMessage(e.Socket);
+                        Console.WriteLine("{0} : {1}", identity, zmsg.BodyToString());
+                    };
+
+                    int requestNumber = 0;
+
+                    var poller = new Poller(new List<ZmqSocket> { client });
+
+                    var zmsg2 = new ZMessage("");
+
+                    JSONMessage jsonMess = new JSONMessage();
+                    jsonMess.Service = "NazwaSerwisu";
+                    jsonMess.Function = "RegisterService";
+                    jsonMess.Parameters = new string[] { "NazwaSerwisu", "AdresSerwisu", "Binding" };
+                    string json = JsonConvert.SerializeObject(jsonMess);
+                    zmsg2.StringToBody(json);
+                    zmsg2.Send(client);
+
+                    while (true)
+                    {
+                        //  Tick once per second, pulling in arriving messages
+                        for (int centitick = 0; centitick < 100; centitick++)
+                        {
+                            poller.Poll(TimeSpan.FromMilliseconds(10));
+                        }
+
+                        var zmsg = new ZMessage("");
+
+                        jsonMess = new JSONMessage();
+                        jsonMess.Service = "NazwaSerwisu";
+                        jsonMess.Function = "GetServiceLocation";
+                        jsonMess.Parameters = new string[] { "NazwaSerwisu", "Binding" };
+                        json = JsonConvert.SerializeObject(jsonMess);
+                        zmsg.StringToBody(json);
+                        zmsg.Send(client);
+                    }
+                }
+            }
+        }
+
+        //  ---------------------------------------------------------------------
+        //  This is our server task
+        //  It uses the multithreaded server model to deal requests out to a pool
+        //  of workers and route replies back to clients. One worker can handle
+        //  one request at a time but one client can talk to multiple workers at
+        //  once.
+        private static void ServerTask()
+        {
+            var workers = new List<Thread>(5);
+            using (var context = ZmqContext.Create())
+            {
+                using (ZmqSocket frontend = context.CreateSocket(SocketType.ROUTER), backend = context.CreateSocket(SocketType.DEALER))
+                {
+                    frontend.Bind("tcp://*:5570");
+                    backend.Bind("inproc://backend");
+
+                    for (int workerNumber = 0; workerNumber < 5; workerNumber++)
+                    {
+                        workers.Add(new Thread(ServerWorker));
+                        workers[workerNumber].Start(context);
+                    }
+
+                    //  Switch messages between frontend and backend
+                    frontend.ReceiveReady += (s, e) =>
+                    {
+                        var zmsg = new ZMessage(e.Socket);
+                        zmsg.Send(backend);
+                    };
+
+                    backend.ReceiveReady += (s, e) =>
+                    {
+
+                        var zmsg = new ZMessage(e.Socket);
+                        string lol = zmsg.BodyToString();
+                        JSONMessage m = JsonConvert.DeserializeObject<JSONMessage>(lol);
+                        if (m.Function != null)
+                        {
+                            switch (m.Function)
+                            {
+                                case "RegisterService":
+                                    Console.WriteLine("ZEROMQ RegisterService: " + m.Parameters[0] + ";" + m.Parameters[1] + ";" + m.Parameters[2]);
+                                    m.ReponseString = "OK";
+                                    Repository.RegisterService(m.Parameters[0], m.Parameters[1], m.Parameters[2]);
+                                    break;
+                                case "GetServiceLocation":
+                                    Console.WriteLine("ZEROMQ GetServiceLocation: "  + m.Parameters[0] + ";" + m.Parameters[1]);
+                                    string locat = Repository.GetServiceLocation(m.Parameters[0], m.Parameters[1]);
+                                    m.ReponseString = locat;
+                                    break;
+                                case "Alive":
+                                    Console.WriteLine("ZEROMQ Alive: " + ";" + m.Parameters[0] + m.Parameters[1]);
+                                    Repository.Alive(m.Parameters[0], m.Parameters[1]);
+                                    m.ReponseString = "OK";
+                                    break;
+                                case "Unregister":
+                                    Console.WriteLine("ZEROMQ Unregister: " + ";" + m.Parameters[0] + m.Parameters[1]);
+                                    Repository.Unregister(m.Parameters[0], m.Parameters[1]);
+                                    m.ReponseString = "OK";
+                                    break;
+                                default:
+                                    Console.WriteLine("Unknown: " + m.Function);
+                                    break;
+                            }
+
+                        }
+                        m.Service = "IServiceRepository";
+                        string json = JsonConvert.SerializeObject(m);
+                        zmsg.StringToBody(json);
+                        zmsg.Send(frontend);
+                    };
+
+                    var poller = new Poller(new List<ZmqSocket> { frontend, backend });
+
+                    while (true)
+                    {
+                        poller.Poll();
+                    }
+                }
+            }
+        }
+
+        //  Accept a request and reply with the same text a random number of
+        //  times, with random delays between replies.
+        private static void ServerWorker(object context)
+        {
+            var randomizer = new Random(DateTime.Now.Millisecond);
+            using (ZmqSocket worker = ((ZmqContext)context).CreateSocket(SocketType.DEALER))
+            {
+                worker.Connect("inproc://backend");
+
+                while (true)
+                {
+                    //  The DEALER socket gives us the address envelope and message
+                    var zmsg = new ZMessage(worker);
+                    //  Send 0..4 replies back
+                    int replies = randomizer.Next(5);
+                    for (int reply = 0; reply < replies; reply++)
+                    {
+                        Thread.Sleep(randomizer.Next(1, 1000));
+                        zmsg.Send(worker);
+                    }
+                }
+            }
+        }
+
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         static void Main(string[] args)
         {
@@ -37,7 +208,7 @@ namespace NServiceRepository
             Database.SetInitializer<EFDbContext>(new DropCreateDatabaseIfModelChanges<EFDbContext>());
             //korzystanie z log4neta
             log4net.Config.XmlConfigurator.Configure();
-            ServiceRepository Repository;
+            //ServiceRepository Repository;
             try
             {
                 //wybranie czy korzystamy z bazy danych czy mock
@@ -70,6 +241,11 @@ namespace NServiceRepository
                 log.Info("Uruchomienie Serwera");
                 Console.WriteLine("Uruchomienie Serwera");
                 //komunikacja z innymi serwisami
+
+                //A takze zeromq
+                var serverThread = new Thread(ServerTask);
+                serverThread.Start();
+
                 Console.ReadLine();
             }
             catch (ServiceRepositoryException Ex)

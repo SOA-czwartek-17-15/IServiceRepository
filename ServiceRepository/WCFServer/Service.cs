@@ -31,5 +31,7 @@ namespace NServiceRepository
          * */
         public String Adress { get; set; }
 
+        public String Binding { get; set; }
+
     }
 }

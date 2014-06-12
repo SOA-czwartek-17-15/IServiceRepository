@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="clrzmq">
+      <HintPath>..\packages\clrzmq.3.0.0-rc1\lib\net40\clrzmq.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -40,6 +43,12 @@
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MsgPack">
+      <HintPath>..\packages\MsgPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -55,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Excceptions.cs" />
     <Compile Include="IServiceRepository.cs" />
+    <Compile Include="JSONMessage.cs" />
     <Compile Include="Models\EFDbContext.cs" />
     <Compile Include="Models\NonRepository.cs" />
     <Compile Include="Models\Repository.cs" />
@@ -64,6 +74,8 @@
     <Compile Include="Service.cs" />
     <Compile Include="ServiceRepository.cs" />
     <Compile Include="ServiceRepositoryHost.cs" />
+    <Compile Include="ZHelpers.cs" />
+    <Compile Include="zmsg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

@@ -51,18 +51,19 @@ namespace NServiceRepository
         /**
          *  Rejestrowanie serwisu
          * */
-        public void RegisterService(String Name, String Address)
+        public void RegisterService(String Name, String Address, String Binding)
         {
            // if (Name == String.Empty || Address == String.Empty)
              //   throw new EmptyAddressOrNameException();
 
-            if (FindService(Name) != null)
-                Unregister(Name);
+            if (FindService(Name, Binding) != null)
+                Unregister(Name, Binding);
 
             var NewService = new Service();
             NewService.Adress = Address;
             NewService.Name = Name;
             NewService.LastSeen = DateTime.Now;
+            NewService.Binding = Binding;
             Console.WriteLine("Zarejestrowano serwis: " + Name + " pod adresem: " + Address);
             log.Info("Zarejestrowano serwis: " + Name + " pod adresem: " + Address);
             if (Datab)
@@ -72,22 +73,46 @@ namespace NServiceRepository
         }
 
         /**
-         * Pobieranie adresu serwisu
+         *  Rejestrowanie serwisu
+         * */
+        public void RegisterService(String Name, String Address)
+        {
+            RegisterService(Name, Address, "NetTcpBinding");
+        }
+
+
+        /**
+         *  Pobieranie adresu serwisu
          * */
         public String GetServiceLocation(String Name)
         {
-            var Service = FindService(Name);
+            return GetServiceLocation(Name, "NetTcpBinding");
+        }
+        /**
+         * Pobieranie adresu serwisu
+         * */
+        public String GetServiceLocation(String Name, String Binding)
+        {
+            var Service = FindService(Name, Binding);
             if (Service == null) return null;
            // if (Service == null) throw new ServiceNotFoundException();
             return Service.Adress;
         }
 
         /**
-         * Wyrejestrowywanie serwisu
+         *  Wyrejestrowywanie serwisu
          * */
         public void Unregister(String Name)
         {
-            var Service = FindService(Name);
+            //this.Unregister(Name, "NetTcpBinding");
+        }
+
+        /**
+         * Wyrejestrowywanie serwisu
+         * */
+        public void Unregister(String Name, String Binding)
+        {
+            var Service = FindService(Name, Binding);
             if (Service != null)
             { 
                 //throw new ServiceNotFoundException();
@@ -105,7 +130,15 @@ namespace NServiceRepository
          * */
         public void Alive(String Name)
         {
-            var Service = FindService(Name);
+            Alive(Name, "NetTcpBinding");
+        }
+
+        /**
+         * Odnowa połączenia aby wiadomo bylo czy serwis dalej istnieje
+         * */
+        public void Alive(String Name, String Binding)
+        {
+            var Service = FindService(Name, Binding);
             if (Service != null)
             {
                 //throw new ServiceNotFoundException();
@@ -122,12 +155,12 @@ namespace NServiceRepository
         /**
          * Odszukiwanie serwisu w liście Services
          * */
-        private Service FindService(String Name)
+        private Service FindService(String Name, String Binding)
         {
             if (Datab)
-                return Repo.FindService(Name);
+                return Repo.FindService(Name, Binding);
             else
-                return NonRepo.FindService(Name);
+                return NonRepo.FindService(Name, Binding);
         }
 
     }
