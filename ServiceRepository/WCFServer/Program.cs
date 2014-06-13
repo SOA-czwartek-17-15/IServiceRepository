@@ -17,6 +17,7 @@ using ZeroMQ;
 using zguide;
 using Newtonsoft.Json;
 using WCFServer;
+using Contracts;
 
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
@@ -57,15 +58,37 @@ namespace NServiceRepository
                     client.ReceiveReady += (s, e) =>
                     {
                         var zmsg = new ZMessage(e.Socket);
-                        Console.WriteLine("{0} : {1}", identity, zmsg.BodyToString());
+                        var lol = zmsg.BodyToString();
+                        JSONMessage m = JsonConvert.DeserializeObject<JSONMessage>(lol);
+
+                        switch (m.Service)
+                        {
+                            case "IServiceRepository":
+                                if (m.Function == "GetServiceLocations")
+                                {
+                                    if (m.ReponseString != "null")
+                                    {
+                                        Console.WriteLine(m.ReponseString);
+                                        List<ServiceAB> foo = JsonConvert.DeserializeObject<List<ServiceAB>>(m.ReponseString);
+                                        Console.WriteLine("{0} : {1} : {2}, {3}", m.Service, m.Function, foo.ElementAt(0).Adress, foo.ElementAt(0).Binding);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("{0} : {1} : {2}", m.Service, m.Function, "Nie istnieje");
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("{0} : {1} : {2}", m.Service, m.Function, m.ReponseString);
+                                }
+                                break;
+                            default:
+                                Console.WriteLine("Unknown: " + m.Service);
+                                break;
+                        }
                     };
-
-                    int requestNumber = 0;
-
                     var poller = new Poller(new List<ZmqSocket> { client });
-
                     var zmsg2 = new ZMessage("");
-
                     JSONMessage jsonMess = new JSONMessage();
                     jsonMess.Service = "NazwaSerwisu";
                     jsonMess.Function = "RegisterService";
@@ -81,13 +104,11 @@ namespace NServiceRepository
                         {
                             poller.Poll(TimeSpan.FromMilliseconds(10));
                         }
-
                         var zmsg = new ZMessage("");
-
                         jsonMess = new JSONMessage();
                         jsonMess.Service = "NazwaSerwisu";
-                        jsonMess.Function = "GetServiceLocation";
-                        jsonMess.Parameters = new string[] { "NazwaSerwisu", "Binding" };
+                        jsonMess.Function = "GetServiceLocations";
+                        jsonMess.Parameters = new string[] { "NazwaSerwisu" };
                         json = JsonConvert.SerializeObject(jsonMess);
                         zmsg.StringToBody(json);
                         zmsg.Send(client);
@@ -142,17 +163,25 @@ namespace NServiceRepository
                                     break;
                                 case "GetServiceLocation":
                                     Console.WriteLine("ZEROMQ GetServiceLocation: "  + m.Parameters[0] + ";" + m.Parameters[1]);
-                                    string locat = Repository.GetServiceLocation(m.Parameters[0], m.Parameters[1]);
-                                    m.ReponseString = locat;
+                                    if (m.Parameters[1]==null)
+                                        m.ReponseString = Repository.GetServiceLocation(m.Parameters[0]);
+                                    else
+                                        m.ReponseString = Repository.GetServiceLocation(m.Parameters[0], m.Parameters[1]);
+                                    break;
+                                case "GetServiceLocations":
+                                    Console.WriteLine("ZEROMQ GetServiceLocations: " + m.Parameters[0]);                                    
+                                    List<ServiceAB> ser = Repository.GetServiceLocations(m.Parameters[0]);
+                                    string locs = JsonConvert.SerializeObject(ser);
+                                    m.ReponseString = locs;
                                     break;
                                 case "Alive":
-                                    Console.WriteLine("ZEROMQ Alive: " + ";" + m.Parameters[0] + m.Parameters[1]);
-                                    Repository.Alive(m.Parameters[0], m.Parameters[1]);
+                                    Console.WriteLine("ZEROMQ Alive: " + ";" + m.Parameters[0]);
+                                    Repository.Alive(m.Parameters[0]);
                                     m.ReponseString = "OK";
                                     break;
                                 case "Unregister":
-                                    Console.WriteLine("ZEROMQ Unregister: " + ";" + m.Parameters[0] + m.Parameters[1]);
-                                    Repository.Unregister(m.Parameters[0], m.Parameters[1]);
+                                    Console.WriteLine("ZEROMQ Unregister: " + ";" + m.Parameters[0]);
+                                    Repository.Unregister(m.Parameters[0]);
                                     m.ReponseString = "OK";
                                     break;
                                 default:
@@ -237,14 +266,22 @@ namespace NServiceRepository
                         debug.IncludeExceptionDetailInFaults = true;
                     }
                 }
+                //komunikacja z innymi serwisami
                 Server.Open();
                 log.Info("Uruchomienie Serwera");
                 Console.WriteLine("Uruchomienie Serwera");
-                //komunikacja z innymi serwisami
-
+                
                 //A takze zeromq
                 var serverThread = new Thread(ServerTask);
                 serverThread.Start();
+
+                //przykladowyKlient
+                //var clients = new List<Thread>(1);
+                //for (int clientNumber = 0; clientNumber < 1; clientNumber++)
+                //{
+                //    clients.Add(new Thread(ClientTask));
+                //    clients[clientNumber].Start();
+                //}
 
                 Console.ReadLine();
             }

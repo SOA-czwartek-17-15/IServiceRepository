@@ -52,6 +52,21 @@ namespace WCFServer.Models
         /**
         * Wyszukwanie serwisu w bazie
         **/
+        public List<Service> FindServices(String Name)
+        {
+            try
+            {
+                return context.Servs.Where(serv => serv.Name == Name).ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /**
+        * Wyszukwanie serwisu w bazie
+        **/
         public Service FindService(String Name, String Binding)
         {
             try

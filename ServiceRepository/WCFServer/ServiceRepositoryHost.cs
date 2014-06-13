@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Runtime.Serialization;
+using Contracts;
 
 namespace NServiceRepository
 {

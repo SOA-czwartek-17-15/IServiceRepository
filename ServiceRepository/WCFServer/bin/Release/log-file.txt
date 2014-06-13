@@ -12782,4 +12782,264 @@
 2014-06-12 01:56:44,612 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): Klient
 2014-06-12 01:56:44,613 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: Klient pod adresem: Location
 2014-06-12 01:56:56,074 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis Klient wygas³.
-2014-06-12 03:28:14,182 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 13:51:43,459 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 13:52:07,927 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:52:07,996 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:52:11,002 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:52:14,007 [27] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:52:17,010 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:52:19,136 [23] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:52:19,137 [23] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:52:20,013 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:55:36,582 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:55:36,620 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:55:48,021 [24] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:55:48,022 [24] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:55:51,992 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:55:52,030 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:56:03,232 [23] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:56:03,233 [23] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:56:05,762 [27] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:56:05,801 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:56:17,429 [24] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:56:17,430 [24] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:57:17,422 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:57:17,459 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:57:27,927 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:57:27,963 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:57:30,980 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:57:56,821 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 13:57:59,745 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:58:00,109 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:58:03,192 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:58:06,213 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:58:09,233 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:58:12,254 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis2
+2014-06-13 13:58:21,720 [22] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:58:21,721 [22] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:58:32,176 [23] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 13:58:32,232 [23] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 13:58:54,162 [6] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 13:58:54,163 [6] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:07:22,845 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:07:23,296 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:07:51,901 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:07:52,070 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:07:55,202 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:07:58,261 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:08:00,985 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:08:01,120 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:08:04,211 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:08:07,268 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:08:28,307 [22] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:08:28,308 [22] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:08:32,549 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:08:32,608 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:08:37,650 [3] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:08:37,724 [3] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:08:41,743 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:08:41,839 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:09:02,782 [23] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:09:03,798 [23] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:11:33,862 [3] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:11:33,957 [3] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:11:37,012 [8] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: Unregister
+2014-06-13 14:11:40,071 [11] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:12:01,248 [13] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:12:01,249 [13] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:12:02,415 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:12:02,473 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:12:05,565 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:12:08,584 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:12:44,492 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:12:47,351 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:12:47,420 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:12:50,453 [11] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:12:53,458 [23] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:13:08,941 [23] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:13:08,978 [23] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:13:08,980 [23] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:13:30,225 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:13:30,261 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:13:30,263 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:13:33,280 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:13:36,283 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:22:07,700 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:22:10,486 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:22:10,556 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:22:10,558 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:22:13,590 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Wyrejestrowano serwis (user): serwis1
+2014-06-13 14:22:16,594 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:37:56,449 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:38:05,536 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 14:38:06,359 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 14:38:18,217 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 14:51:27,361 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:51:30,056 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:51:30,125 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:51:30,128 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:52:16,591 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:52:19,979 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:52:20,048 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:52:20,051 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:52:31,324 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:52:31,325 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:53:42,414 [8] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:53:46,113 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:53:46,181 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:53:46,183 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:53:58,154 [21] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:53:58,155 [21] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:54:54,120 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:54:57,115 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:54:57,185 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:54:57,188 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:55:08,838 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:55:08,839 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 14:55:58,957 [8] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:56:02,196 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:56:02,266 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:56:02,269 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:56:44,917 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:56:47,506 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:56:47,576 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:56:47,578 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 14:59:54,486 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 14:59:56,618 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 14:59:56,858 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 14:59:56,970 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:00:18,383 [24] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:00:18,384 [24] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:00:28,641 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:00:28,696 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:00:28,942 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:00:49,809 [23] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:00:49,810 [23] INFO  WCFServer.Models.Repository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:01:52,318 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:01:54,982 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:01:55,233 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:01:55,389 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:02:02,096 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:02:02,169 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:02:02,206 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:03:08,152 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:03:19,696 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:03:19,766 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:03:19,769 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:03:30,973 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:03:30,974 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:11:42,823 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:11:46,685 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:11:46,755 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:11:46,758 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:11:58,491 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:11:58,492 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:12:08,101 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:12:08,138 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:12:08,140 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:12:19,786 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:12:19,787 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:13:01,515 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:13:04,401 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:13:04,469 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:13:04,472 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:13:16,212 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:13:16,213 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:13:50,086 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding1
+2014-06-13 15:13:50,124 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1 o bindnigu: binding2
+2014-06-13 15:13:50,129 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:14:01,841 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:14:01,842 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:14:06,717 [8] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 15:14:06,754 [8] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 15:14:06,755 [8] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:14:18,065 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:14:18,066 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:27:28,702 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:28:51,554 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 15:28:51,623 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 15:28:51,625 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:29:03,466 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:29:03,467 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:29:27,182 [28] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 15:29:27,219 [28] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 15:29:27,221 [28] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 15:29:38,956 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:29:38,957 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 15:56:21,084 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:58:11,581 [8] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 15:58:15,240 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 15:58:26,292 [21] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 16:00:17,362 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:00:18,359 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:00:30,001 [21] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 16:01:22,447 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:01:23,098 [15] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:01:34,899 [21] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 16:16:04,089 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 16:16:09,995 [18] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:16:10,305 [18] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:17:03,592 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 16:17:17,507 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:17:18,018 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:17:29,498 [23] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 16:21:06,247 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 16:21:09,329 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 16:21:09,399 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 16:21:09,402 [13] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:27:29,510 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 16:27:34,287 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:27:34,860 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:27:35,012 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:27:35,308 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindnigu: Binding
+2014-06-13 16:27:47,293 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 16:28:04,134 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 16:28:04,204 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 16:28:04,206 [24] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:28:15,686 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:28:15,687 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:28:32,410 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 16:28:32,448 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 16:28:32,449 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:28:44,078 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:28:44,079 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:29:15,029 [27] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 16:29:15,066 [27] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 16:29:15,068 [27] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:29:22,236 [26] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:29:33,765 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:29:33,766 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:29:37,011 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:29:51,817 [14] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:30:16,199 [30] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:31:01,041 [32] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:31:09,366 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 16:31:09,405 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 16:31:09,407 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:31:21,250 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:31:21,251 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:31:59,157 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 16:32:04,827 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindnigu: binding1
+2014-06-13 16:32:04,896 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindnigu: binding2
+2014-06-13 16:32:04,898 [10] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:32:15,912 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:32:15,913 [6] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:56:25,861 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 16:56:29,574 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 16:56:30,193 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 16:56:30,490 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 16:56:41,557 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 16:56:50,794 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin1 o bindingu: binding1
+2014-06-13 16:56:50,864 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: serwis1 pod adresem: adres_serwisu_1_bin2 o bindingu: binding2
+2014-06-13 16:56:50,866 [25] INFO  NServiceRepository.ServiceRepository [(null)] - Zglosil sie serwis: serwis1
+2014-06-13 16:57:02,851 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 16:57:02,852 [22] INFO  WCFServer.Models.NonRepository [(null)] - Serwis serwis1 wygas³.
+2014-06-13 17:33:32,878 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 17:34:22,256 [10] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 17:34:48,186 [17] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 17:34:59,280 [16] INFO  WCFServer.Models.NonRepository [(null)] - Serwis NazwaSerwisu wygas³.
+2014-06-13 17:37:24,509 [9] INFO  NServiceRepository.Program [(null)] - Uruchomienie Serwera
+2014-06-13 17:38:18,558 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 17:38:18,692 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 17:38:18,886 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding
+2014-06-13 17:38:19,807 [16] INFO  NServiceRepository.ServiceRepository [(null)] - Zarejestrowano serwis: NazwaSerwisu pod adresem: AdresSerwisu o bindingu: Binding

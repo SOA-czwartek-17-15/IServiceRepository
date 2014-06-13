@@ -44,6 +44,18 @@ namespace WCFServer.Models
         public void UpdateService(Service serv)
         {
         }
+
+        /**
+        * Wyszukwanie serwisu w bazie
+        **/
+        public List<Service> FindServices(String Name)
+        {
+            lock (_locker)
+            {
+                return Services.FindAll(serv => serv.Name == Name);
+            }
+        }
+
         /**
         * Wyszukwanie serwisu w bazie
         **/

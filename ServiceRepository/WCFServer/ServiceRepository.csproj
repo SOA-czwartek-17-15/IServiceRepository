@@ -35,6 +35,9 @@
     <Reference Include="clrzmq">
       <HintPath>..\packages\clrzmq.3.0.0-rc1\lib\net40\clrzmq.dll</HintPath>
     </Reference>
+    <Reference Include="Contracts">
+      <HintPath>E:\Dokumenty\Konrad\Studia\AGH\3 rok\sevikon\2 sem\soa\NOWY SERWIS ZEROMQ OST\NOWY SERWIS\IServiceRepository-master\ServiceRepository\packages\Contracts.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -63,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Excceptions.cs" />
-    <Compile Include="IServiceRepository.cs" />
     <Compile Include="JSONMessage.cs" />
     <Compile Include="Models\EFDbContext.cs" />
     <Compile Include="Models\NonRepository.cs" />

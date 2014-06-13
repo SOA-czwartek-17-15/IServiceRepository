@@ -11,6 +11,7 @@ using log4net;
 using WCFServer.Models;
 using WCFServer;
 using System.Threading;
+using Contracts;
 
 namespace NServiceRepository
 {
@@ -64,8 +65,8 @@ namespace NServiceRepository
             NewService.Name = Name;
             NewService.LastSeen = DateTime.Now;
             NewService.Binding = Binding;
-            Console.WriteLine("Zarejestrowano serwis: " + Name + " pod adresem: " + Address);
-            log.Info("Zarejestrowano serwis: " + Name + " pod adresem: " + Address);
+            Console.WriteLine("Zarejestrowano serwis: " + Name + " pod adresem: " + Address + " o bindingu: " + Binding);
+            log.Info("Zarejestrowano serwis: " + Name + " pod adresem: " + Address + " o bindingu: " + Binding);
             if (Datab)
                 Repo.AddService(NewService);
             else
@@ -80,6 +81,27 @@ namespace NServiceRepository
             RegisterService(Name, Address, "NetTcpBinding");
         }
 
+        /**
+         *  Pobieranie adresu serwisu
+         * */
+        public List<ServiceAB> GetServiceLocations(String Name) 
+        {
+            List<Service> serwisy = FindServices(Name);
+            if (serwisy.Count == 0)
+                return null;
+            else
+            {
+                List<ServiceAB> listaKrotek = new List<ServiceAB>();
+                foreach (Service serw in serwisy)
+                {
+                    ServiceAB foo = new ServiceAB();
+                    foo.Binding=serw.Binding;
+                    foo.Adress=serw.Adress;
+                    listaKrotek.Add(foo);
+                }
+                return listaKrotek;
+            }
+        }
 
         /**
          *  Pobieranie adresu serwisu
@@ -100,56 +122,68 @@ namespace NServiceRepository
         }
 
         /**
-         *  Wyrejestrowywanie serwisu
+         * Wyrejestrowywanie serwisu
          * */
         public void Unregister(String Name)
         {
-            //this.Unregister(Name, "NetTcpBinding");
+            List<Service> serwisy = FindServices(Name);
+            foreach (Service serw in serwisy)
+            {
+                //throw new ServiceNotFoundException();
+                if (Datab)
+                    Repo.RemoveService(serw);
+                else
+                    NonRepo.RemoveService(serw);
+            }
+            Console.WriteLine("Wyrejestrowano serwis (user): " + Name);
+            log.Info("Wyrejestrowano serwis (user): " + Name);
         }
 
         /**
-         * Wyrejestrowywanie serwisu
-         * */
-        public void Unregister(String Name, String Binding)
+        * Wyrejestrowywanie serwisu
+        * */
+        private void Unregister(String Name, String Binding)
         {
             var Service = FindService(Name, Binding);
             if (Service != null)
-            { 
+            {
                 //throw new ServiceNotFoundException();
                 if (Datab)
                     Repo.RemoveService(Service);
                 else
                     NonRepo.RemoveService(Service);
-                Console.WriteLine("Wyrejestrowano serwis (user): " + Name);
-                log.Info("Wyrejestrowano serwis (user): " + Name);
             }
         }
+
 
         /**
          * Odnowa połączenia aby wiadomo bylo czy serwis dalej istnieje
          * */
         public void Alive(String Name)
         {
-            Alive(Name, "NetTcpBinding");
+            List<Service> serwisy = FindServices(Name);
+            foreach (Service serw in serwisy)
+            {
+                //throw new ServiceNotFoundException();
+                serw.LastSeen = DateTime.Now;
+                if (Datab)
+                    Repo.UpdateService(serw);
+                else
+                    NonRepo.UpdateService(serw);
+            }
+            Console.WriteLine("Zglosil sie serwis: " + Name);
+            log.Info("Zglosil sie serwis: " + Name);
         }
 
         /**
-         * Odnowa połączenia aby wiadomo bylo czy serwis dalej istnieje
-         * */
-        public void Alive(String Name, String Binding)
+        * Odszukiwanie serwisu ze wzystkimi bindingami w liście Services
+        * */
+        private List<Service> FindServices(String Name)
         {
-            var Service = FindService(Name, Binding);
-            if (Service != null)
-            {
-                //throw new ServiceNotFoundException();
-                Service.LastSeen = DateTime.Now;
-                if (Datab)
-                    Repo.UpdateService(Service);
-                else
-                    NonRepo.UpdateService(Service);
-                Console.WriteLine("Zglosil sie serwis: " + Name);
-                log.Info("Zglosil sie serwis: " + Name);
-            }
+            if (Datab)
+                return Repo.FindServices(Name);
+            else
+                return NonRepo.FindServices(Name);
         }
 
         /**
